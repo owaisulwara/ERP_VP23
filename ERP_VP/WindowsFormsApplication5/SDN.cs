@@ -62,12 +62,12 @@ namespace WindowsFormsApplication5
             }
             OleDbCommand cmd3 = new OleDbCommand(@"Select SOID from SDN", cls.con);
             OleDbDataReader dr3 = cmd3.ExecuteReader();
-            int c = 0;
+            int d = 0;
             while (dr3.Read())
             {
-                c++;
+                d++;
             }
-            GRNID_txt.Text = VName_txt.Text + "-00" + (c + 1).ToString() + System.DateTime.Today.Year;
+            GRNID_txt.Text = VName_txt.Text + "-00" + (d + 1).ToString() + System.DateTime.Today.Year;
             cls.con.Close();
             
         }
