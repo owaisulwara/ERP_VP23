@@ -35,7 +35,7 @@ namespace WindowsFormsApplication5
         public override void GRNID_comBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             cls.con.Open();
-            OleDbCommand cmd = new OleDbCommand(@"Select * from SDN where GRNID = '" + GRNID_comBox.Text + "'", cls.con);
+            OleDbCommand cmd = new OleDbCommand(@"Select * from SDN where SDNID = '" + GRNID_comBox.Text + "'", cls.con);
             OleDbDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {

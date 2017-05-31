@@ -27,6 +27,7 @@ namespace WindowsFormsApplication5
             DDate_lbl.Size = new Size(100, 20);
             DDate_lbl.Location = new Point((((GRN_grp.Width / 2) + (GRN_grp.Width / 4))) - DDate_lbl.Size.Width / 2, 305);
             GRNID_lbl.Text = "SDN ID:";
+            GRNID_txt.Enabled = true;
             GDate_lbl.Text = "SDN Date:";
             create_Btn.Text = "Create SDN";
         }
@@ -67,8 +68,9 @@ namespace WindowsFormsApplication5
             {
                 d++;
             }
-            GRNID_txt.Text = VName_txt.Text + "-00" + (d + 1).ToString() + System.DateTime.Today.Year;
             cls.con.Close();
+            GRNID_txt.Text = VName_txt.Text + "-00" + (d + 1).ToString() + System.DateTime.Today.Year;
+            
             
         }
         #endregion
@@ -77,11 +79,12 @@ namespace WindowsFormsApplication5
         {
             if (!(POID_comBox.Text == "" && POID_comBox.Text == "Choose Product ID"))
             {
+                cls.con.Close();
                 cls.con.Open();
                 OleDbCommand cmd1 = new OleDbCommand("insert into SDN(SDNID,BaseDocument,Status,CName,RDate,SDDate, TotalAmount)values(@SDNID,@BaseDocument,@Status,@CName,@RDate,@SDDate, @TotalAmount);", cls.con);
                 cmd1.Parameters.AddWithValue("@SDNID", GRNID_txt.Text);
                 cmd1.Parameters.AddWithValue("@BaseDocument", Vendor_txt.Text);
-                cmd1.Parameters.AddWithValue("@Status", "open");
+                cmd1.Parameters.AddWithValue("@Status", "Open");
                 cmd1.Parameters.AddWithValue("@CName", VName_txt.Text);
                 cmd1.Parameters.AddWithValue("@RDate", DDate_txt.Text);
                 cmd1.Parameters.AddWithValue("@SDDate", GDate.Text);
