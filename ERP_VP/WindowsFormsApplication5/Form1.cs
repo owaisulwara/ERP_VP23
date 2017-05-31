@@ -36,6 +36,10 @@ namespace WindowsFormsApplication5
         Invoice invoice = new Invoice();
         SalesOrderFunc salesfunc = new SalesOrderFunc();
         SalesOrder salesorder = new SalesOrder();
+        SDNFunc sdnfunc = new SDNFunc();
+        SDN sdn = new SDN();
+        InvoiceSOFunc invoicesofunc = new InvoiceSOFunc();
+        InvoiceSO invoiceso = new InvoiceSO();
         #endregion
         #region "Panels"
         //Top Cotrol Panel -->
@@ -140,6 +144,8 @@ namespace WindowsFormsApplication5
             selectionpanel.GRN_Btn.Click += GRN_Btn_Click;
             selectionpanel.Invoice_Btn.Click += Invoice_Btn_Click;
             selectionpanel.Sales_Btn.Click += Sales_Btn_Click;
+            selectionpanel.SDN_Btn.Click += SDN_Btn_Click;
+            selectionpanel.SOInvoice_Btn.Click += SOInvoice_Btn_Click;
             #endregion
             #region "AdministratorFunc"
             administratorfunc.adminFunc();
@@ -232,12 +238,29 @@ namespace WindowsFormsApplication5
             salesorder.salesOrder();
             this.Controls.Add(salesorder.PO_Pnl);
             #endregion
+            #region "SDNFunc"
+            sdnfunc.SDNfunc();
+            this.Controls.Add(sdnfunc.customer_Pnl);
+            sdnfunc.insert_btn.Click -= insert_btn_Click;
+            sdnfunc.insert_btn.Click += SDNadd_btn_Click;
+            #endregion
+            #region "SDN"
+            sdn.SDNData();
+            this.Controls.Add(sdn.GRN_Pnl);
+            #endregion
+            #region "InvoiceSOFunc"
+            invoicesofunc.invoiceSOFunc();
+            this.Controls.Add(invoicesofunc.customer_Pnl);
+            invoicesofunc.insert_btn.Click -= insert_btn_Click;
+            invoicesofunc.insert_btn.Click += InvoiceSOAdd_Click;
+            #endregion
+            #region "InvoiceSO"
+            invoiceso.invoiceSO();
+            this.Controls.Add(invoiceso.Invoice_Pnl);
+            #endregion
         }
 
         
-
-        
-
         void Sign_Btn_Click(object sender, EventArgs e)
         {
             login.Login_Pnl.Visible = false;
@@ -320,6 +343,9 @@ namespace WindowsFormsApplication5
             invoice.Invoice_Pnl.Visible = false;
             salesfunc.customer_Pnl.Visible = false;
             salesorder.PO_Pnl.Visible = false;
+            sdnfunc.customer_Pnl.Visible = false;
+            sdn.GRN_Pnl.Visible = false;
+            invoicesofunc.customer_Pnl.Visible = false;
         }
         private void customer_Btn_Click(object sender, EventArgs e)
         {
@@ -342,6 +368,9 @@ namespace WindowsFormsApplication5
             invoice.Invoice_Pnl.Visible = false;
             salesfunc.customer_Pnl.Visible = false;
             salesorder.PO_Pnl.Visible = false;
+            sdnfunc.customer_Pnl.Visible = false;
+            sdn.GRN_Pnl.Visible = false;
+            invoicesofunc.customer_Pnl.Visible = false;
         }
         void vendor_Btn_Click(object sender, EventArgs e)
         {
@@ -364,6 +393,9 @@ namespace WindowsFormsApplication5
             salesfunc.customer_Pnl.Visible = false;
             invoicefunc.customer_Pnl.Visible = false;
             salesorder.PO_Pnl.Visible = false;
+            sdnfunc.customer_Pnl.Visible = false;
+            sdn.GRN_Pnl.Visible = false;
+            invoicesofunc.customer_Pnl.Visible = false;
         }
         void purchase_Btn_Click(object sender, EventArgs e)
         {
@@ -386,6 +418,9 @@ namespace WindowsFormsApplication5
             salesfunc.customer_Pnl.Visible = false;
             invoicefunc.customer_Pnl.Visible = false;
             salesorder.PO_Pnl.Visible = false;
+            sdnfunc.customer_Pnl.Visible = false;
+            sdn.GRN_Pnl.Visible = false;
+            invoicesofunc.customer_Pnl.Visible = false;
         }
         void GRN_Btn_Click(object sender, EventArgs e)
         {
@@ -408,6 +443,9 @@ namespace WindowsFormsApplication5
             salesfunc.customer_Pnl.Visible = false;
             invoicefunc.customer_Pnl.Visible = false;
             salesorder.PO_Pnl.Visible = false;
+            sdnfunc.customer_Pnl.Visible = false;
+            sdn.GRN_Pnl.Visible = false;
+            invoicesofunc.customer_Pnl.Visible = false;
         }
         void Invoice_Btn_Click(object sender, EventArgs e)
         {
@@ -430,6 +468,9 @@ namespace WindowsFormsApplication5
             salesfunc.customer_Pnl.Visible = false;
             invoicefunc.customer_Pnl.Visible = true;
             salesorder.PO_Pnl.Visible = false;
+            sdnfunc.customer_Pnl.Visible = false;
+            sdn.GRN_Pnl.Visible = false;
+            invoicesofunc.customer_Pnl.Visible = false;
         }
         void Sales_Btn_Click(object sender, EventArgs e)
         {
@@ -452,6 +493,59 @@ namespace WindowsFormsApplication5
             invoicefunc.customer_Pnl.Visible = false;
             salesfunc.customer_Pnl.Visible = true;
             salesorder.PO_Pnl.Visible = false;
+            sdnfunc.customer_Pnl.Visible = false;
+            sdn.GRN_Pnl.Visible = false;
+            invoicesofunc.customer_Pnl.Visible = false;
+        }
+        void SDN_Btn_Click(object sender, EventArgs e)
+        {
+            invoice.Invoice_Pnl.Visible = false;
+            wel.Visible = false;
+            customerData.customerDataPnl.Visible = false;
+            customerdataupdate.customerDataPnl.Visible = false;
+            administratorfunc.customer_Pnl.Visible = false;
+            customerfunc.customer_Pnl.Visible = false;
+            customerdataview.customerDataPnl.Visible = false;
+            vendordata.customerDataPnl.Visible = false;
+            purchasefunc.customer_Pnl.Visible = false;
+            vendorfunc.customer_Pnl.Visible = false;
+            vendordataupdate.customerDataPnl.Visible = false;
+            vendordataview.customerDataPnl.Visible = false;
+            customerdataapprove.customerDataPnl.Visible = false;
+            purchaseorder.PO_Pnl.Visible = false;
+            grnfunc.customer_Pnl.Visible = false;
+            grn.GRN_Pnl.Visible = false;
+            invoicefunc.customer_Pnl.Visible = false;
+            salesfunc.customer_Pnl.Visible = false;
+            salesorder.PO_Pnl.Visible = false;
+            sdn.GRN_Pnl.Visible = false;
+            invoicesofunc.customer_Pnl.Visible = false;
+            sdnfunc.customer_Pnl.Visible = true;
+        }
+        private void SOInvoice_Btn_Click(object sender, EventArgs e)
+        {
+            invoice.Invoice_Pnl.Visible = false;
+            wel.Visible = false;
+            customerData.customerDataPnl.Visible = false;
+            customerdataupdate.customerDataPnl.Visible = false;
+            administratorfunc.customer_Pnl.Visible = false;
+            customerfunc.customer_Pnl.Visible = false;
+            customerdataview.customerDataPnl.Visible = false;
+            vendordata.customerDataPnl.Visible = false;
+            purchasefunc.customer_Pnl.Visible = false;
+            vendorfunc.customer_Pnl.Visible = false;
+            vendordataupdate.customerDataPnl.Visible = false;
+            vendordataview.customerDataPnl.Visible = false;
+            customerdataapprove.customerDataPnl.Visible = false;
+            purchaseorder.PO_Pnl.Visible = false;
+            grnfunc.customer_Pnl.Visible = false;
+            grn.GRN_Pnl.Visible = false;
+            invoicefunc.customer_Pnl.Visible = false;
+            salesfunc.customer_Pnl.Visible = false;
+            salesorder.PO_Pnl.Visible = false;
+            sdn.GRN_Pnl.Visible = false;
+            sdnfunc.customer_Pnl.Visible = false;
+            invoicesofunc.customer_Pnl.Visible = true;
         }
         #endregion
         #region "AdministratorFunc"
@@ -757,6 +851,45 @@ namespace WindowsFormsApplication5
             while (dr2.Read())
             {
                  salesorder.PModel_comBox.Items.Add(dr2["PModel"]);
+            }
+            cls.con.Close();
+        }
+        #endregion
+        #region "SDNfunc"
+        private void SDNadd_btn_Click(object sender, EventArgs e)
+        {
+            sdnfunc.customer_Pnl.Visible = false;
+            sdn.GRN_Pnl.Visible = true;
+            sdn.POID_comBox.Items.Clear();
+            cls.con.Open();
+            OleDbCommand cmd = new OleDbCommand("select SOID from SO", cls.con);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                sdn.POID_comBox.Items.Add(dr["SOID"]);
+            }
+            cls.con.Close();
+        }
+        #endregion
+        #region "InvoiceSOFunc"
+        private void InvoiceSOAdd_Click(object sender, EventArgs e)
+        {
+            invoicesofunc.customer_Pnl.Visible = false;
+            invoiceso.Invoice_Pnl.Visible = true;
+            invoiceso.GRNID_comBox.Items.Clear();
+            invoiceso.PayableAmount_txt.Clear();
+            invoiceso.Deliver_txt.Clear();
+            invoiceso.GRNDate_txt.Clear();
+            invoiceso.VID_txt.Clear();
+            invoiceso.VName_txt.Clear();
+            invoiceso.PModel_txt.Clear();
+            invoiceso.PQuantity_txt.Clear();
+            cls.con.Open();
+            OleDbCommand cmd = new OleDbCommand(@"Select SDNID from SDN", cls.con);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                invoiceso.GRNID_comBox.Items.Add(dr["SDNID"]);
             }
             cls.con.Close();
         }

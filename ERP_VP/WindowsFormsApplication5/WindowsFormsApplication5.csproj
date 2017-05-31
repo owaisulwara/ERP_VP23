@@ -62,6 +62,8 @@
     <Compile Include="GRNFunc.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="InvoiceFunc.cs" />
+    <Compile Include="InvoiceSO.cs" />
+    <Compile Include="InvoiceSOFunc.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +71,8 @@
     <Compile Include="PurchaseOrder.cs" />
     <Compile Include="SalesOrder.cs" />
     <Compile Include="SalesOrderFunc.cs" />
+    <Compile Include="SDN.cs" />
+    <Compile Include="SDNFunc.cs" />
     <Compile Include="SelectionPanel.cs" />
     <Compile Include="SignUp.cs" />
     <Compile Include="VendorData.cs" />

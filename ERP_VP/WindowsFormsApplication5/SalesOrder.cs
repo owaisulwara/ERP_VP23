@@ -31,7 +31,7 @@ namespace WindowsFormsApplication5
             Vdpt_lbl.Size = new Size(190, 20);
         }
 
-        private override void Create1_btn_Click(object sender, System.EventArgs e)
+        public override void Create_btn_Click(object sender, System.EventArgs e)
         {
             if (!(PODpt_comBox.Text == "" && PODpt_comBox.Text == "Choose Department" && POID_txt.Text == "" && VID_comBox.Text == "" && VID_comBox.Text == "Choose Vendor ID" && VName_txt.Text == "" && Vdpt_txt.Text == "" && CPName_txt.Text == "" && CPPH_txt.Text == "" && Final_txt.Text == ""))
             {

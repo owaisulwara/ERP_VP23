@@ -195,7 +195,7 @@ namespace WindowsFormsApplication5
             Invoice_grp.Controls.Add(VName_txt);
             #endregion
             #region "PModel_lbl"
-            PModel_lbl.Size = new Size(110, 20);
+            PModel_lbl.Size = new Size(105, 20);
             PModel_lbl.Location = new Point((((Invoice_grp.Width / 2) + (Invoice_grp.Width / 4))) - PModel_lbl.Size.Width / 2, 205);
             PModel_lbl.Font = new Font("Arial", 10, FontStyle.Regular);
             PModel_lbl.Text = "Product Model:";
@@ -230,7 +230,7 @@ namespace WindowsFormsApplication5
             #endregion
         }
         #region "GRNID"
-        void GRNID_comBox_SelectedIndexChanged(object sender, EventArgs e)
+        public virtual void GRNID_comBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             cls.con.Open();
             OleDbCommand cmd = new OleDbCommand(@"Select * from GRN where GRNID = '"+GRNID_comBox.Text+"'", cls.con);
@@ -251,15 +251,13 @@ namespace WindowsFormsApplication5
             cls.con.Close();
         }
         #endregion
-
-
         #region "Create_Btn Functions"
         private void create_Btn_MouseHover(object sender, EventArgs e)
         {
             create_Btn.Cursor = Cursors.Hand;
         }
 
-        private void create_Btn_Click(object sender, EventArgs e)
+        public virtual void create_Btn_Click(object sender, EventArgs e)
         {
             if(!(GRNID_comBox.Text=="" && GRNID_comBox.Text=="Choose GRN ID")){
             cls.con.Open();

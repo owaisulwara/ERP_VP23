@@ -66,7 +66,7 @@ namespace WindowsFormsApplication5
         public GroupBox GRN_grp = new GroupBox();
         #endregion
         #region "DateTimePiker"
-        DateTimePicker GDate = new DateTimePicker();
+        public DateTimePicker GDate = new DateTimePicker();
         #endregion
         #endregion
         public void GRNData() {
@@ -87,10 +87,10 @@ namespace WindowsFormsApplication5
             GRN_Pnl.Controls.Add(GRN_grp);
             #endregion
             #region "POID_lbl"
-            POID_lbl.Size = new Size(195, 20);
+            POID_lbl.Size = new Size(250, 20);
             POID_lbl.Location = new Point((GRN_grp.Width / 3) - POID_lbl.Size.Width / 2, 105);
             POID_lbl.Font = new Font("Arial", 10, FontStyle.Regular);
-            POID_lbl.Text = "Product ID:";
+            POID_lbl.Text = "Purchase Order ID:";
             POID_lbl.ForeColor = Color.Gray;
             GRN_grp.Controls.Add(POID_lbl);
             #endregion
@@ -270,13 +270,12 @@ namespace WindowsFormsApplication5
             GRN_grp.Controls.Add(create_Btn);
             #endregion
         }
-
         #region "POID"
         void POID_comBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }
-        public void POID_comBox_SelectedIndexChanged(object sender, EventArgs e)
+        public virtual void POID_comBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             cls.con.Open();
             OleDbCommand cmd = new OleDbCommand(@"Select * from POProducts WHERE POID = '" + POID_comBox.Text + "';", cls.con);
@@ -313,12 +312,12 @@ namespace WindowsFormsApplication5
         }
         #endregion
         #region "create_Btn Functions"
-        private void create_Btn_MouseHover(object sender, EventArgs e)
+        public void create_Btn_MouseHover(object sender, EventArgs e)
         {
             create_Btn.Cursor = Cursors.Hand;
         }
 
-        private void create_Btn_Click(object sender, EventArgs e)
+        public virtual void create_Btn_Click(object sender, EventArgs e)
         {
             if (!(POID_comBox.Text == "" && POID_comBox.Text=="Choose Product ID"))
             {
@@ -341,7 +340,7 @@ namespace WindowsFormsApplication5
                 cmd3.ExecuteNonQuery();
                 cls.con.Close();
                 MessageBox.Show("GRN has been created successfully!");
-                POID_comBox.Text = "Choose Product ID";
+                POID_comBox.Text = "Choose Purchase Order ID";
                 PModel_txt.Clear();
                 PQuantity_txt.Clear();
                 PPrice_txt.Clear();

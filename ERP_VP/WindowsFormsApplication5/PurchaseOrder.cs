@@ -453,7 +453,7 @@ namespace WindowsFormsApplication5
         {
             Create_btn.Cursor = Cursors.Hand;
         }
-        void Create_btn_Click(object sender, EventArgs e)
+        public virtual void Create_btn_Click(object sender, EventArgs e)
         {
             if (!(PODpt_comBox.Text == "" && PODpt_comBox.Text == "Choose Department" && POID_txt.Text == "" && VID_comBox.Text == "" && VID_comBox.Text == "Choose Vendor ID" && VName_txt.Text == "" && Vdpt_txt.Text == "" && CPName_txt.Text == "" && CPPH_txt.Text == "" && Final_txt.Text == ""))
             {

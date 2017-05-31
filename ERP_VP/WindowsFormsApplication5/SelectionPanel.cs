@@ -47,6 +47,8 @@ namespace WindowsFormsApplication5
         public Button GRN_Btn = new Button();
         public Button Invoice_Btn = new Button();
         public Button Sales_Btn = new Button();
+        public Button SDN_Btn = new Button();
+        public Button SOInvoice_Btn = new Button();
         //selection_Pnl buttons <--
         #endregion
         #endregion
@@ -174,9 +176,67 @@ namespace WindowsFormsApplication5
             Sales_Btn.MouseLeave += Sales_Btn_MouseLeave;
             selection_Pnl.Controls.Add(Sales_Btn);
             #endregion
+            #region "SDN_Btn"
+            SDN_Btn.Size = new Size(250, 25);
+            SDN_Btn.Padding = new Padding(15, 0, 0, 0);
+            SDN_Btn.TextAlign = ContentAlignment.MiddleLeft;
+            SDN_Btn.Font = new Font("Arial", 10, FontStyle.Regular);
+            SDN_Btn.FlatAppearance.BorderSize = 0;
+            SDN_Btn.Location = new Point(0, Sales_Btn.Location.Y + 30);
+            SDN_Btn.FlatStyle = FlatStyle.Flat;
+            SDN_Btn.BackColor = Color.Transparent;
+            SDN_Btn.ForeColor = Color.White;
+            SDN_Btn.Text = "> SDN Creation";
+            SDN_Btn.MouseEnter += SDN_Btn_MouseEnter;
+            SDN_Btn.MouseLeave += SDN_Btn_MouseLeave;
+            selection_Pnl.Controls.Add(SDN_Btn);
+            #endregion
+            #region "SOInvoice_Btn"
+            SOInvoice_Btn.Size = new Size(250, 25);
+            SOInvoice_Btn.Padding = new Padding(15, 0, 0, 0);
+            SOInvoice_Btn.TextAlign = ContentAlignment.MiddleLeft;
+            SOInvoice_Btn.Font = new Font("Arial", 10, FontStyle.Regular);
+            SOInvoice_Btn.FlatAppearance.BorderSize = 0;
+            SOInvoice_Btn.Location = new Point(0, SDN_Btn.Location.Y + 30);
+            SOInvoice_Btn.FlatStyle = FlatStyle.Flat;
+            SOInvoice_Btn.BackColor = Color.Transparent;
+            SOInvoice_Btn.ForeColor = Color.White;
+            SOInvoice_Btn.Text = "> SOInvoice Creation";
+            SOInvoice_Btn.MouseEnter += SOInvoice_Btn_MouseEnter;
+            SOInvoice_Btn.MouseLeave += SOInvoice_Btn_MouseLeave;
+            selection_Pnl.Controls.Add(SOInvoice_Btn);
+            #endregion
         }
 
+        
+
+        
+
         #region "Selection_pnl Functions"
+        private void SOInvoice_Btn_MouseLeave(object sender, EventArgs e)
+        {
+            SOInvoice_Btn.BackColor = Color.Transparent;
+            SOInvoice_Btn.ForeColor = Color.White;
+        }
+
+        private void SOInvoice_Btn_MouseEnter(object sender, EventArgs e)
+        {
+            SOInvoice_Btn.BackColor = Color.White;
+            SOInvoice_Btn.ForeColor = Color.CornflowerBlue;
+            SOInvoice_Btn.Cursor = Cursors.Hand;
+        }
+        private void SDN_Btn_MouseLeave(object sender, EventArgs e)
+        {
+            SDN_Btn.BackColor = Color.Transparent;
+            SDN_Btn.ForeColor = Color.White;
+        }
+
+        private void SDN_Btn_MouseEnter(object sender, EventArgs e)
+        {
+            SDN_Btn.BackColor = Color.White;
+            SDN_Btn.ForeColor = Color.CornflowerBlue;
+            SDN_Btn.Cursor = Cursors.Hand;
+        }
         private void Sales_Btn_MouseLeave(object sender, EventArgs e)
         {
             Sales_Btn.BackColor = Color.Transparent;
