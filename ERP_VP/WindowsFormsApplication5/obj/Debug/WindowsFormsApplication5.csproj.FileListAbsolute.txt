@@ -1,0 +1,18 @@
+C:\Users\Owais\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe.config
+C:\Users\Owais\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe
+C:\Users\Owais\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.pdb
+C:\Users\Owais\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Form1.resources
+C:\Users\Owais\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Properties.Resources.resources
+C:\Users\Owais\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csproj.GenerateResource.Cache
+C:\Users\Owais\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.exe
+C:\Users\Owais\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.pdb
+C:\Users\Owais\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csprojResolveAssemblyReference.cache
+C:\Users\Owais ul wara\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe.config
+C:\Users\Owais ul wara\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.exe
+C:\Users\Owais ul wara\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.pdb
+C:\Users\Owais ul wara\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe
+C:\Users\Owais ul wara\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.pdb
+C:\Users\Owais ul wara\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csprojResolveAssemblyReference.cache
+C:\Users\Owais ul wara\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Form1.resources
+C:\Users\Owais ul wara\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Properties.Resources.resources
+C:\Users\Owais ul wara\Documents\Visual Studio 2012\Projects\ERP_VP\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csproj.GenerateResource.Cache
